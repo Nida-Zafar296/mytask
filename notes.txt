@@ -1,0 +1,24 @@
+Create a login and register form (Using HTML/SASS). Form should use grid layout for  and flex layout for 
+Use JavaScript for validation (No empty/invalid submissions and ensure strong password)
+Use PHP on server side with OOP 
+Use MySQL DB to store user entries.
+-----------------------------------------------------------------------------------------------------------
+- User should be able to view login, register pages if he/she is already logged in. Unless he/she loggs out. 
+- Logout login
+ -- Destroy session
+ -- Return back to login page (can use redirect method)
+- Study singleton design pattern and use that for your Database class.
+- Convert JavaScript code to jQuery
+- See if we can use users class to access his/her name instead of session (Give it a try)
+------------------------------------------------------------------------------------------------------------------
+                                    solve problem
+- Make sure password is of at lest 8 characters and is strong password (Do not use Regular expression for this)
+- Push this code to a GitHub repo (Do this for all the tasks)
+- PHP code in login.html should work as desired.
+ - Follow standard directory structure
+  -- Project name 
+     --- assets
+        - css
+        - js
+     --- server-side
+ - Use BEM for scss and HTML structure
