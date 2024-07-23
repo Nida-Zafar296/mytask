@@ -4,8 +4,9 @@ require_once 'Database.php';
 class User {
     private $conn;
 
-    public function __construct($db) {
-        $this->conn = $db->getConnection();
+    public function __construct() {
+        $this->conn = Database::getInstance()->getConnection();
+
         if (session_status() == PHP_SESSION_NONE) {
             session_start();
         }
@@ -28,25 +29,19 @@ class User {
     public function verifyUser($email, $password) {
         $user = $this->getUserByEmail($email);
         if ($user && password_verify($password, $user['password'])) {
-
             $_SESSION['user_email'] = $user['email'];
             $_SESSION['user_id'] = $user['id']; 
-
             return true;
         }
         return false;
     }
 
     public function isLoggedIn() {
-
         return isset($_SESSION['user_email']);
     }
 
     public function logout() {
-
         session_unset();
-
-
         session_destroy();
     }
 }
