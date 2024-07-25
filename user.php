@@ -30,7 +30,7 @@ class User {
         $user = $this->getUserByEmail($email);
         if ($user && password_verify($password, $user['password'])) {
             $_SESSION['user_email'] = $user['email'];
-            $_SESSION['user_id'] = $user['id']; 
+            $_SESSION['user_id'] = $user['id'];
             return true;
         }
         return false;
